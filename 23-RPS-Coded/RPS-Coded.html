@@ -6,26 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="text/javascript">
+  <script type="text/javascript">
 
-    var rpsChoices = ["rock", "paper", "scizzors"];
+    // Create the variables for rock, paper, and scizzors
+    var computerChoices = ["rock", "paper", "scizzors"]
 
-    var wins = 0;
-    var loses = 0;
-    var ties = 0;
+    // Create variables for winning, losing, and tie.
+    var wins = "0";
+    var loses = "0";
+    var ties = "0";
 
+    // Create the loop
     for (var i = 0; i < 10; i++) {
 
-    var userGuess = prompt ("Enter rock, paper or scizzors to start playing!");
-    userGuess = userGuess.toLowerCase
-    
+    // Create a promt for the user to input their answer
+    var userGuess = promt("Type in rock, paper, or scizzor to play!");
+
+    // Make user's choice all lowercase
+    userGuess = userGuess.toLowerCase();
+
+    // Test on the console to make sure it's working
     console.log(userGuess);
-
-
-    
-        
     }
 
-    </script>
+    // Create a function to generate computer's random rock, paper, or scizzors guess
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]
+    
+
+
+      
+  </script>
 </body>
 </html>
+
