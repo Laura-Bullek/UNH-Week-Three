@@ -18,5 +18,6 @@ names[0] = "Zeta";
 
 // An if statements that confirms the first element in the array has been replaced 
 // from Alpha to Zeta
+if (students[0] !== "Alpha") {
 console.log (names[0] + " is in class");
-
+}
