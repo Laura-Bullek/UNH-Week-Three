@@ -9,7 +9,6 @@ console.log (customerOrder.name)
 console.log (customerOrder.sugars)
 
 function orderReady () {
-    //customerOrder.order_ready? true : false
     if (customerOrder.order_ready === true) {
         console.log ("Ready for pick-up");
     } else {
