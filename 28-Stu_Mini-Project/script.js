@@ -8,34 +8,51 @@
 // Call the play game function
 
 // TO start the game, we need to have a prompt and store what the user types
-let userChoice = prompt("Do you want to play a game? Please tpe in R, P or S to start!").toUpperCase();
+let userChoice = prompt("Do you want to play a game? Please type in rock, paper, or scizzors to start!");
+userChoice.toLowerCase;
 
 // Created an object for the user choice and stats
-let choices = ["R", "P", "S"]; 
+let choices = ["rock", "paper", "scizzors"]; 
 
-let stats = {
-    wins: 0,
-    losses: 0,
-    ties: 0,
-}
+// if (userChoice !== choices) {
+//     prompt("Please enter a valid choice. Choose rock, paper, or scizzors to start!");
+// }
+
+var ties = 0;
+var wins = 0;
+var losses = 0;
 
 // Create function for computer choice
 function computerChoice() {
     // get a number between 0 and 2
     const index = Math.floor(Math.random() * choices.length);
-    // get a choice from the choices array, R, P, or S
+    // get a choice from the choices array
     return choices[index];
 };
 
 const computerEnter = computerChoice();
 
-alert("The computer chose" + computerEnter);
+alert("The computer chose " + computerEnter);
 
 if (userChoice === computerEnter) {
     alert("You tied!")
-} else if (userChoice === computerEnter["R"]){
-    alert();
+    ties++;
+} else if (
+    userChoice === "rock" && computerEnter === "scizzors" ||
+    userChoice === "paper" && computerEnter === "rock"||
+    userChoice === "scizzors" && computerEnter === "paper"
+    ){
+    wins++
+    alert("You won!");
+
+} else {
+    loses++
+    alert("You lost!");
 }
+
+alert(
+    "Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
+  );
 
 
 
